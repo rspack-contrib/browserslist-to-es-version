@@ -1,10 +1,10 @@
-# rsbuild-plugin-example
+# browserslist-to-es-version
 
-rsbuild-plugin-example is a Rsbuild plugin to do something.
+Convert [browserslist](https://github.com/browserslist/browserslist) query to ECMAScript version.
 
 <p>
-  <a href="https://npmjs.com/package/rsbuild-plugin-example">
-   <img src="https://img.shields.io/npm/v/rsbuild-plugin-example?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" />
+  <a href="https://npmjs.com/package/browserslist-to-es-version">
+   <img src="https://img.shields.io/npm/v/browserslist-to-es-version?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" />
   </a>
   <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" />
 </p>
@@ -14,34 +14,31 @@ rsbuild-plugin-example is a Rsbuild plugin to do something.
 Install:
 
 ```bash
-npm add rsbuild-plugin-example -D
+npm add browserslist-to-es-version -D
 ```
 
-Add plugin to your `rsbuild.config.ts`:
+Example:
 
 ```ts
-// rsbuild.config.ts
-import { pluginExample } from "rsbuild-plugin-example";
+import {browserslistToESVersion} from 'browserslist-to-es-version';
 
-export default {
-  plugins: [pluginExample()],
-};
+const esVersion = browserslistToESVersion([
+  "chrome >= 87",
+  "edge >= 88",
+  "firefox >= 78",
+  "safari >= 14",
+]);
+
+console.log(esVersion); // 2017
 ```
 
-## Options
+## Type
 
-### foo
+```ts
+// Only supports ES5 ~ ES2018
+type ESVersion = 5 | 2015 | 2016 | 2017 | 2018;
 
-Some description.
-
-- Type: `string`
-- Default: `undefined`
-- Example:
-
-```js
-pluginExample({
-  foo: "bar",
-});
+function browserslistToESVersion(browsers: string[]): ESVersion;
 ```
 
 ## License

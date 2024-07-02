@@ -14,7 +14,9 @@
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch",
@@ -30,6 +32,9 @@
 		"*.{js,jsx,ts,tsx,mjs,cjs}": [
 			"biome check --write --no-errors-on-unmatched"
 		]
+	},
+	"dependencies": {
+		"browserslist": "^4.23.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
