@@ -20,7 +20,7 @@ npm add browserslist-to-es-version -D
 Example:
 
 ```ts
-import {browserslistToESVersion} from 'browserslist-to-es-version';
+import { browserslistToESVersion } from 'browserslist-to-es-version';
 
 const esVersion = browserslistToESVersion([
   "chrome >= 87",
