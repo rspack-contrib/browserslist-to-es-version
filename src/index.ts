@@ -12,8 +12,14 @@ const ES_VERSIONS_MAP: Record<string, number[]> = {
 	samsung: [5, 6.2, 6.2, 8.2],
 };
 
+const aliases: Record<string, string> = {
+	ios_saf: 'safari',
+	and_chr: 'chrome',
+	and_ff: 'firefox',
+};
+
 const renameBrowser = (name: string) => {
-	return name === 'ios_saf' ? 'safari' : name;
+	return aliases[name] || name;
 };
 
 export function browserslistToESVersion(browsers: string[]): ESVersion {

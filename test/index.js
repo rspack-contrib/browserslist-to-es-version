@@ -59,4 +59,9 @@ test('should get ECMA version correctly', () => {
 	);
 	assert.strictEqual(browserslistToESVersion(['ie 11', 'baidu 7.12']), 5);
 	assert.strictEqual(browserslistToESVersion(['ios_saf 11']), 2017);
+
+	// https://github.com/browserslist/browserslist/issues/682
+	assert.strictEqual(browserslistToESVersion(['and_ff >= 78']), 2018);
+	assert.strictEqual(browserslistToESVersion(['and_chr >= 53']), 2018);
+	assert.strictEqual(browserslistToESVersion(['ChromeAndroid >= 53']), 2018);
 });
