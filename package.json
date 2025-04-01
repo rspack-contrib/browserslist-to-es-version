@@ -38,13 +38,13 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@rslib/core": "^0.5.2",
-		"@types/node": "^22.13.8",
+		"@rslib/core": "^0.6.1",
+		"@types/node": "^22.13.14",
 		"nano-staged": "^0.8.0",
-		"simple-git-hooks": "^2.11.1",
+		"simple-git-hooks": "^2.12.1",
 		"typescript": "^5.8.2"
 	},
-	"packageManager": "pnpm@10.5.2",
+	"packageManager": "pnpm@10.7.0",
 	"publishConfig": {
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
