@@ -23,7 +23,7 @@
 		"lint": "biome check .",
 		"lint:write": "biome check . --write",
 		"prepare": "simple-git-hooks && npm run build",
-		"test": "node ./test/index.js"
+		"test": "rstest run"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "npx nano-staged"
@@ -39,6 +39,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@rslib/core": "^0.9.1",
+		"@rstest/core": "https://pkg.pr.new/web-infra-dev/rstest/@rstest/core@1b40438",
 		"@types/node": "^22.15.29",
 		"nano-staged": "^0.8.0",
 		"simple-git-hooks": "^2.13.0",
