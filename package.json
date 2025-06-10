@@ -39,7 +39,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@rslib/core": "^0.9.1",
-		"@rstest/core": "https://pkg.pr.new/web-infra-dev/rstest/@rstest/core@1b40438",
+		"@rstest/core": "0.0.1",
 		"@types/node": "^22.15.29",
 		"nano-staged": "^0.8.0",
 		"simple-git-hooks": "^2.13.0",
