@@ -27,7 +27,7 @@ export function browserslistToESVersion(browsers: string[]): ESVersion {
 		ignoreUnknownVersions: true,
 	});
 
-	let esVersion: ESVersion = 2018;
+	let esVersion: ESVersion = 2019;
 
 	for (const item of projectBrowsers) {
 		const pairs = item.split(' ');
@@ -65,6 +65,8 @@ export function browserslistToESVersion(browsers: string[]): ESVersion {
 			esVersion = Math.min(2016, esVersion) as ESVersion;
 		} else if (version < versions[3]) {
 			esVersion = Math.min(2017, esVersion) as ESVersion;
+		} else if (version < versions[4]) {
+			esVersion = Math.min(2018, esVersion) as ESVersion;
 		}
 	}
 
