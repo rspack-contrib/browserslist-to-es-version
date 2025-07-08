@@ -1,15 +1,15 @@
 import browserslist from 'browserslist';
 
-export type ESVersion = 5 | 2015 | 2016 | 2017 | 2018 | 2019;
+export type ESVersion = 5 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020;
 
-// The minimal version for [es2015, es2016, es2017, es2018, es2019]
+// The minimal version for [es2015, es2016, es2017, es2018, es2019, es2020]
 const ES_VERSIONS_MAP: Record<string, number[]> = {
-	chrome: [51, 52, 57, 64, 73],
-	edge: [15, 15, 15, 79, 79],
-	safari: [10, 10.3, 11, 16.4, 17],
-	firefox: [54, 54, 54, 78, 78],
-	opera: [38, 39, 44, 51, 60],
-	samsung: [5, 6.2, 6.2, 8.2, 11.1],
+	chrome: [51, 52, 57, 64, 73, 80],
+	edge: [15, 15, 15, 79, 79, 80],
+	safari: [10, 10.3, 11, 16.4, 17, 17],
+	firefox: [54, 54, 54, 78, 78, 80],
+	opera: [38, 39, 44, 51, 60, 67],
+	samsung: [5, 6.2, 6.2, 8.2, 11.1, 13],
 };
 
 const aliases: Record<string, string> = {
@@ -27,7 +27,7 @@ export function browserslistToESVersion(browsers: string[]): ESVersion {
 		ignoreUnknownVersions: true,
 	});
 
-	let esVersion: ESVersion = 2019;
+	let esVersion: ESVersion = 2020;
 
 	for (const item of projectBrowsers) {
 		const pairs = item.split(' ');
@@ -67,6 +67,8 @@ export function browserslistToESVersion(browsers: string[]): ESVersion {
 			esVersion = Math.min(2017, esVersion) as ESVersion;
 		} else if (version < versions[4]) {
 			esVersion = Math.min(2018, esVersion) as ESVersion;
+		} else if (version < versions[5]) {
+			esVersion = Math.min(2019, esVersion) as ESVersion;
 		}
 	}
 
