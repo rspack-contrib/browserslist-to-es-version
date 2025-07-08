@@ -20,7 +20,7 @@ npm add browserslist-to-es-version -D
 Example:
 
 ```ts
-import { browserslistToESVersion } from 'browserslist-to-es-version';
+import { browserslistToESVersion } from "browserslist-to-es-version";
 
 const esVersion = browserslistToESVersion([
   "chrome >= 87",
@@ -35,11 +35,20 @@ console.log(esVersion); // 2017
 ## Type
 
 ```ts
-// Only supports ES5 ~ ES2018
-type ESVersion = 5 | 2015 | 2016 | 2017 | 2018;
+// Only supports ES5 ~ ES2019
+type ESVersion = 5 | 2015 | 2016 | 2017 | 2018 | 2019;
 
 function browserslistToESVersion(browsers: string[]): ESVersion;
 ```
+
+## Data source
+
+- https://caniuse.com/?search=es2019
+- https://caniuse.com/?search=es2018
+- https://caniuse.com/?search=es2017
+- https://caniuse.com/?search=es2016
+- https://caniuse.com/?search=es2015
+- https://caniuse.com/?search=es5
 
 ## License
 
