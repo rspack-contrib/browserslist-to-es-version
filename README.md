@@ -36,13 +36,14 @@ console.log(esVersion); // 2017
 
 ```ts
 // Only supports ES5 ~ ES2021
-type ESVersion = 5 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021;
+type ESVersion = 5 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022;
 
 function browserslistToESVersion(browsers: string[]): ESVersion;
 ```
 
 ## Data source
 
+- https://caniuse.com/?search=es2022
 - https://caniuse.com/?search=es2021
 - https://caniuse.com/?search=es2020
 - https://caniuse.com/?search=es2019
