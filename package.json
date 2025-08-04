@@ -1,6 +1,6 @@
 {
 	"name": "browserslist-to-es-version",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"repository": "https://github.com/rspack-contrib/browserslist-to-es-version",
 	"license": "MIT",
 	"type": "module",
