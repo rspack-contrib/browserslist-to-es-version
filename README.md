@@ -10,7 +10,22 @@ Convert [browserslist](https://github.com/browserslist/browserslist) query to EC
   <a href="https://npmcharts.com/compare/browserslist-to-es-version?minimal=true"><img src="https://img.shields.io/npm/dm/browserslist-to-es-version.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
 </p>
 
-## Usage
+## CLI usage
+
+In any package with a browserslist configuration:
+
+```bash
+$ npx browserslist-to-es-version
+2017
+```
+
+Alternatively, you can provide a browserslist query as a string:
+
+```bash
+npx browserslist-to-es-version "Chrome >= 80, Firefox >= 72"
+```
+
+## API usage
 
 Install:
 
@@ -33,10 +48,10 @@ const esVersion = browserslistToESVersion([
 console.log(esVersion); // 2017
 ```
 
-## Type
+### Type
 
 ```ts
-// Only supports ES5 ~ ES2021
+// Only supports ES5 ~ ES2022
 type ESVersion = 5 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022;
 
 function browserslistToESVersion(browsers: string[]): ESVersion;

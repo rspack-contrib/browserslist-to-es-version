@@ -14,9 +14,10 @@
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"bin": {
+		"browserslist-to-es-version": "./dist/cli.js"
+	},
+	"files": ["dist"],
 	"scripts": {
 		"build": "rslib build",
 		"dev": "rslib build --watch",
@@ -24,7 +25,7 @@
 		"lint:write": "biome check . --write",
 		"prepare": "simple-git-hooks && npm run build",
 		"test": "rstest run",
-    "bump": "npx bumpp"
+		"bump": "npx bumpp"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "npx nano-staged"
