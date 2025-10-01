@@ -1,54 +1,54 @@
 {
-	"name": "browserslist-to-es-version",
-	"version": "1.1.1",
-	"repository": "https://github.com/rspack-contrib/browserslist-to-es-version",
-	"license": "MIT",
-	"type": "module",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js",
-			"require": "./dist/index.cjs"
-		}
-	},
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "rslib build",
-		"dev": "rslib build --watch",
-		"lint": "biome check .",
-		"lint:write": "biome check . --write",
-		"prepare": "simple-git-hooks && npm run build",
-		"test": "rstest run",
+  "name": "browserslist-to-es-version",
+  "version": "1.1.1",
+  "repository": "https://github.com/rspack-contrib/browserslist-to-es-version",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "lint": "biome check .",
+    "lint:write": "biome check . --write",
+    "prepare": "simple-git-hooks && npm run build",
+    "test": "rstest run",
     "bump": "npx bumpp"
-	},
-	"simple-git-hooks": {
-		"pre-commit": "npx nano-staged"
-	},
-	"nano-staged": {
-		"*.{js,jsx,ts,tsx,mjs,cjs}": [
-			"biome check --write --no-errors-on-unmatched"
-		]
-	},
-	"dependencies": {
-		"browserslist": "^4.26.2"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@rslib/core": "^0.15.0",
-		"@rstest/core": "0.5.1",
-		"@types/node": "^22.18.8",
-		"nano-staged": "^0.8.0",
-		"simple-git-hooks": "^2.13.1",
-		"typescript": "^5.9.3"
-	},
-	"packageManager": "pnpm@10.17.1",
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org/"
-	}
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx nano-staged"
+  },
+  "nano-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
+  },
+  "dependencies": {
+    "browserslist": "^4.26.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@rslib/core": "^0.15.0",
+    "@rstest/core": "0.5.1",
+    "@types/node": "^22.18.8",
+    "nano-staged": "^0.8.0",
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@10.17.1",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
