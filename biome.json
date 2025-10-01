@@ -29,16 +29,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "style": {
-        "noParameterAssign": "off"
-      },
-      "complexity": {
-        "noForEach": "off"
-      },
-      "suspicious": {
-        "noAssignInExpressions": "off"
-      }
+      "recommended": true
     }
   }
 }
