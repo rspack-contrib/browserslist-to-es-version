@@ -38,7 +38,7 @@
 		"browserslist": "^4.26.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
+		"@biomejs/biome": "^2.2.4",
 		"@rslib/core": "^0.15.0",
 		"@rstest/core": "0.5.1",
 		"@types/node": "^22.18.8",
