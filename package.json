@@ -35,18 +35,18 @@
     ]
   },
   "dependencies": {
-    "browserslist": "^4.27.0"
+    "browserslist": "^4.28.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.2",
-    "@rslib/core": "^0.17.0",
-    "@rstest/core": "0.6.1",
-    "@types/node": "^22.18.13",
-    "nano-staged": "^0.8.0",
+    "@biomejs/biome": "^2.3.8",
+    "@rslib/core": "^0.18.2",
+    "@rstest/core": "0.6.8",
+    "@types/node": "^22.19.1",
+    "nano-staged": "^0.9.0",
     "simple-git-hooks": "^2.13.1",
     "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.24.0",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
